@@ -27,7 +27,7 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.3em] text-text-muted mb-4">
             NOMADS COMPANY
           </p>
-          <p className="text-accent text-sm md:text-base font-medium tracking-wider mb-6">
+          <p className="text-blue-400 text-sm md:text-base font-medium tracking-wider mb-6">
             Premium Visual Production
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1]">
