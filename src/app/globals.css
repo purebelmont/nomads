@@ -169,6 +169,12 @@ body {
 .dashboard-wrap {
   font-family: -apple-system, BlinkMacSystemFont, 'Pretendard Variable', 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.dashboard-wrap * {
+  border-color: var(--border);
 }
 
 /* iOS-style inputs for dashboard */
@@ -176,4 +182,10 @@ body {
 .dashboard-wrap textarea,
 .dashboard-wrap select {
   font-size: 16px;
+  color: var(--text);
+}
+
+.dashboard-wrap input::placeholder,
+.dashboard-wrap textarea::placeholder {
+  color: var(--text-muted);
 }
