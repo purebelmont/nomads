@@ -13,6 +13,19 @@ export default function AdminAuthPage() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  async function demoLogin() {
+    setLoading(true);
+    setError("");
+    const demoEmail = "demo@nomads.co.kr";
+    const demoPw = "demo1234";
+    const { error } = await supabase.auth.signInWithPassword({ email: demoEmail, password: demoPw });
+    if (error) {
+      await supabase.auth.signUp({ email: demoEmail, password: demoPw, options: { data: { name: "데모 관리자" } } });
+      await supabase.auth.signInWithPassword({ email: demoEmail, password: demoPw });
+    }
+    router.push("/dashboard");
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
@@ -89,6 +102,19 @@ export default function AdminAuthPage() {
             <>계정이 없으신가요? <button onClick={() => setMode("register")} className="text-accent">계정 생성</button></>
           )}
         </p>
+
+        <div className="flex items-center gap-4 my-6">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-xs text-text-muted">또는</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
+        <button
+          onClick={demoLogin} disabled={loading}
+          className="w-full p-3 bg-mid-gray hover:bg-light-gray border border-border text-white rounded-lg font-medium text-sm transition-colors disabled:opacity-50"
+        >
+          데모 계정으로 바로 체험
+        </button>
       </div>
     </div>
   )
