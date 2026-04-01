@@ -46,6 +46,12 @@ export default function Header() {
               </Link>
             ))}
             <Link
+              href="/auth"
+              className="text-sm tracking-wide text-text-secondary hover:text-white transition-colors"
+            >
+              로그인
+            </Link>
+            <Link
               href="/contact"
               className="bg-accent hover:bg-accent-hover text-white text-sm font-medium px-5 py-2.5 rounded transition-colors"
             >

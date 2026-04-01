@@ -50,6 +50,15 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
               {item.label}
             </Link>
           ))}
+          <div className="mt-4 pt-4 border-t border-border">
+            <Link
+              href="/auth"
+              onClick={onClose}
+              className="text-lg py-3 px-4 rounded-lg transition-colors text-accent hover:bg-mid-gray block"
+            >
+              로그인 / 데모
+            </Link>
+          </div>
         </nav>
       </div>
     </div>
