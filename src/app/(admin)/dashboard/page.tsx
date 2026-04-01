@@ -60,7 +60,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data }) => {
-      if (!data.user) { router.push("/admin/auth"); return; }
+      if (!data.user) { router.push("/auth"); return; }
       setUser(data.user);
       // Get or create profile
       const { data: p } = await supabase.from("profiles").select("*").eq("id", data.user.id).single();
@@ -251,7 +251,7 @@ export default function Dashboard() {
             </button>
           )}
           <button onClick={() => router.push("/")} className="text-xs text-[var(--gray-500)] hover:text-[var(--primary)] block px-2">홈으로</button>
-          <button onClick={async () => { await supabase.auth.signOut(); router.push("/admin/auth"); }} className="text-xs text-[var(--gray-500)] hover:text-[var(--danger)] block px-2">로그아웃</button>
+          <button onClick={async () => { await supabase.auth.signOut(); router.push("/auth"); }} className="text-xs text-[var(--gray-500)] hover:text-[var(--danger)] block px-2">로그아웃</button>
         </div>
       </div>
 
@@ -307,7 +307,7 @@ export default function Dashboard() {
               <button onClick={generateSample} disabled={sampleLoading} className="text-xs text-[var(--primary)]">{sampleLoading ? "..." : "📦"}</button>
             )}
             <button onClick={() => router.push("/")} className="text-sm text-[var(--primary)]">홈</button>
-            <button onClick={async () => { await supabase.auth.signOut(); router.push("/admin/auth"); }} className="text-sm text-[var(--gray-500)]">나가기</button>
+            <button onClick={async () => { await supabase.auth.signOut(); router.push("/auth"); }} className="text-sm text-[var(--gray-500)]">나가기</button>
           </div>
         </div>
 
