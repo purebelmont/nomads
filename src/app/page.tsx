@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import Button from '@/components/ui/Button'
 import SectionHeading from '@/components/ui/SectionHeading'
@@ -5,14 +6,21 @@ import ServiceCard from '@/components/ui/ServiceCard'
 import StatCounter from '@/components/ui/StatCounter'
 import PortfolioCard from '@/components/ui/PortfolioCard'
 import { ChevronDownIcon } from '@/components/icons'
-import { SERVICES, COMPANY_STATS, PLACEHOLDER_PORTFOLIO } from '@/lib/constants'
+import { SERVICES, COMPANY_STATS, PLACEHOLDER_PORTFOLIO, IMAGES } from '@/lib/constants'
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-dark-gray to-black" />
+        <Image
+          src={IMAGES.hero}
+          alt="Industrial background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(227,5,51,0.08),transparent_70%)]" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">

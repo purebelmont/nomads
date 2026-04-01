@@ -116,15 +116,26 @@ export const PORTFOLIO_CATEGORIES = [
 ]
 
 export const PLACEHOLDER_PORTFOLIO: PortfolioItem[] = [
-  { id: '1', title: '대형 조선소 항공 촬영', client: 'HD한국조선해양', category: 'drone', thumbnail_url: '', description: '조선소 전경 및 선박 건조 과정을 4K 항공 촬영으로 기록', year: 2025 },
-  { id: '2', title: '스마트팩토리 홍보영상', client: '삼성물산', category: 'corporate', thumbnail_url: '', description: '최첨단 스마트팩토리 시설과 자동화 공정 홍보 영상 제작', year: 2025 },
-  { id: '3', title: '초대형 크레인 제품 촬영', client: '현대건설기계', category: 'product', thumbnail_url: '', description: '450톤급 크레인의 스케일과 디테일을 담은 제품 촬영', year: 2025 },
-  { id: '4', title: '건설 현장 타임랩스', client: '대우건설', category: 'drone', thumbnail_url: '', description: '18개월간 초고층 건물 건설 과정을 드론 타임랩스로 기록', year: 2024 },
-  { id: '5', title: '기업 브랜드 필름', client: '포스코', category: 'corporate', thumbnail_url: '', description: '철강 산업의 미래 비전을 담은 시네마틱 브랜드 필름', year: 2024 },
-  { id: '6', title: '산업 장비 카탈로그 촬영', client: '두산인프라코어', category: 'product', thumbnail_url: '', description: '굴삭기, 휠로더 등 건설 장비 라인업 카탈로그 촬영', year: 2024 },
-  { id: '7', title: 'TV 광고 제작', client: '현대중공업', category: 'commercial', thumbnail_url: '', description: '글로벌 시장 대상 기업 이미지 TV 광고 제작', year: 2024 },
-  { id: '8', title: '플랜트 시설 홍보영상', client: 'SK건설', category: 'corporate', thumbnail_url: '', description: '해외 플랜트 시설의 기술력과 규모를 담은 홍보 영상', year: 2023 },
+  { id: '1', title: '대형 조선소 항공 촬영', client: 'HD한국조선해양', category: 'drone', thumbnail_url: 'https://images.pexels.com/photos/9083327/pexels-photo-9083327.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '조선소 전경 및 선박 건조 과정을 4K 항공 촬영으로 기록', year: 2025 },
+  { id: '2', title: '스마트팩토리 홍보영상', client: '삼성물산', category: 'corporate', thumbnail_url: 'https://images.pexels.com/photos/28806603/pexels-photo-28806603.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '최첨단 스마트팩토리 시설과 자동화 공정 홍보 영상 제작', year: 2025 },
+  { id: '3', title: '초대형 크레인 제품 촬영', client: '현대건설기계', category: 'product', thumbnail_url: 'https://images.pexels.com/photos/14651/pexels-photo-14651.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '450톤급 크레인의 스케일과 디테일을 담은 제품 촬영', year: 2025 },
+  { id: '4', title: '건설 현장 타임랩스', client: '대우건설', category: 'drone', thumbnail_url: 'https://images.pexels.com/photos/14066336/pexels-photo-14066336.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '18개월간 초고층 건물 건설 과정을 드론 타임랩스로 기록', year: 2024 },
+  { id: '5', title: '기업 브랜드 필름', client: '포스코', category: 'corporate', thumbnail_url: 'https://images.pexels.com/photos/29976478/pexels-photo-29976478.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '철강 산업의 미래 비전을 담은 시네마틱 브랜드 필름', year: 2024 },
+  { id: '6', title: '산업 장비 카탈로그 촬영', client: '두산인프라코어', category: 'product', thumbnail_url: 'https://images.pexels.com/photos/10396410/pexels-photo-10396410.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '굴삭기, 휠로더 등 건설 장비 라인업 카탈로그 촬영', year: 2024 },
+  { id: '7', title: 'TV 광고 제작', client: '현대중공업', category: 'commercial', thumbnail_url: 'https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '글로벌 시장 대상 기업 이미지 TV 광고 제작', year: 2024 },
+  { id: '8', title: '플랜트 시설 홍보영상', client: 'SK건설', category: 'corporate', thumbnail_url: 'https://images.pexels.com/photos/10407689/pexels-photo-10407689.jpeg?auto=compress&cs=tinysrgb&w=1200', description: '해외 플랜트 시설의 기술력과 규모를 담은 홍보 영상', year: 2023 },
 ]
+
+export const IMAGES = {
+  hero: 'https://images.pexels.com/photos/929385/pexels-photo-929385.jpeg?auto=compress&cs=tinysrgb&w=1920',
+  about: 'https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  services: {
+    drone: 'https://images.pexels.com/photos/1506991/pexels-photo-1506991.jpeg?auto=compress&cs=tinysrgb&w=800',
+    corporate: 'https://images.pexels.com/photos/6847073/pexels-photo-6847073.jpeg?auto=compress&cs=tinysrgb&w=800',
+    product: 'https://images.pexels.com/photos/7648508/pexels-photo-7648508.jpeg?auto=compress&cs=tinysrgb&w=800',
+    commercial: 'https://images.pexels.com/photos/11484830/pexels-photo-11484830.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+} as const
 
 export const BUDGET_OPTIONS = [
   '500만원 미만',

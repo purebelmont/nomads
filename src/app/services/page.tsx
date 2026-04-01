@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Button from '@/components/ui/Button'
-import VideoPlaceholder from '@/components/ui/VideoPlaceholder'
 import { ServiceIcon } from '@/components/icons'
-import { SERVICES, PROCESS_STEPS } from '@/lib/constants'
+import { SERVICES, PROCESS_STEPS, IMAGES } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: '서비스 | NOMADS COMPANY',
@@ -33,7 +33,15 @@ export default function ServicesPage() {
             }`}>
               {/* Image side */}
               <AnimatedSection className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                <VideoPlaceholder label={service.title} />
+                <div className="aspect-video relative rounded-lg overflow-hidden border border-border">
+                  <Image
+                    src={IMAGES.services[service.id as keyof typeof IMAGES.services] || IMAGES.hero}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </AnimatedSection>
 
               {/* Text side */}

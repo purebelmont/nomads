@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Button from '@/components/ui/Button'
-import VideoPlaceholder from '@/components/ui/VideoPlaceholder'
 import StatCounter from '@/components/ui/StatCounter'
 import { ServiceIcon } from '@/components/icons'
-import { COMPANY_STATS } from '@/lib/constants'
+import { COMPANY_STATS, IMAGES } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: '회사소개 | NOMADS COMPANY',
@@ -47,7 +47,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimatedSection>
-              <VideoPlaceholder label="촬영 현장" />
+              <div className="aspect-video relative rounded-lg overflow-hidden border border-border">
+                <Image src={IMAGES.about} alt="촬영 현장" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div>
