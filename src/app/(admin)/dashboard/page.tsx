@@ -30,7 +30,7 @@ export default function Dashboard() {
   const [profile, setProfile] = useState<any>(null);
   const [tab, setTab] = useState<Tab>("home");
   const [loading, setLoading] = useState(true);
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [mobileMore, setMobileMore] = useState(false);
   const router = useRouter();
 
@@ -43,7 +43,8 @@ export default function Dashboard() {
   // Dark mode
   useEffect(() => {
     const saved = localStorage.getItem("nomads_dark");
-    if (saved === "true") { setDark(true); document.documentElement.classList.add("dark"); }
+    if (saved === "false") { setDark(false); document.documentElement.classList.remove("dark"); }
+    else { setDark(true); document.documentElement.classList.add("dark"); }
   }, []);
 
   const toggleDark = () => {
