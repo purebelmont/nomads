@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Geist } from "next/font/google"
 import { Noto_Sans_KR } from "next/font/google"
-import Header from "@/components/layout/Header"
-import Footer from "@/components/layout/Footer"
 import "./globals.css"
 
 const geist = Geist({
@@ -35,9 +33,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${geist.variable} ${notoSansKR.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
