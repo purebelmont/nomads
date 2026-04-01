@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 
 export default function AdminAuthPage() {
   const [mode, setMode] = useState<"login" | "register">("login");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("demo@nomads.co.kr");
+  const [password, setPassword] = useState("demo1234");
   const [name, setName] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -113,8 +113,11 @@ export default function AdminAuthPage() {
           onClick={demoLogin} disabled={loading}
           className="w-full p-3 bg-mid-gray hover:bg-light-gray border border-border text-white rounded-lg font-medium text-sm transition-colors disabled:opacity-50"
         >
-          데모 계정으로 바로 체험
+          {loading ? "로그인 중..." : "데모 계정으로 바로 체험"}
         </button>
+        <p className="text-center text-xs text-text-muted mt-3">
+          demo@nomads.co.kr / demo1234
+        </p>
       </div>
     </div>
   )
