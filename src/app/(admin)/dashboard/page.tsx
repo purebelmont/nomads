@@ -488,10 +488,7 @@ function ContactsPanel({ userId, openModal, closeModal }: { userId: string; open
             className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] dark:bg-gray-700 text-[var(--gray-700)]">
             {importing ? "..." : "📥 Import"}
           </button>
-          <button onClick={() => openForm(undefined, "fullscreen")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">A</button>
-          <button onClick={() => openForm(undefined, "bottom")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">B</button>
-          <button onClick={() => openForm(undefined, "side")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">C</button>
-          <button onClick={() => openForm(undefined, "inline")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">D</button>
+          <button onClick={() => openForm(undefined, "inline")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">+ 추가</button>
         </div>
       </div>
       {/* Inline form */}
