@@ -8,9 +8,7 @@ import FilesPanel from "@/components/dashboard/FilesPanel";
 import QuotesPanel from "@/components/dashboard/QuotesPanel";
 import PayrollPanel from "@/components/dashboard/PayrollPanel";
 import ReportPanel from "@/components/dashboard/ReportPanel";
-import CertificatePanel from "@/components/dashboard/CertificatePanel";
-
-type Tab = "home" | "contacts" | "calendar" | "notes" | "todos" | "files" | "ledger" | "reservations" | "quotes" | "payroll" | "report" | "certificate";
+type Tab = "home" | "contacts" | "calendar" | "notes" | "todos" | "files" | "ledger" | "reservations" | "quotes" | "payroll" | "report";
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: "home", icon: "🏠", label: "대시보드" },
@@ -24,7 +22,6 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: "quotes", icon: "💼", label: "견적" },
   { id: "payroll", icon: "👥", label: "급여" },
   { id: "report", icon: "📊", label: "리포트" },
-  { id: "certificate", icon: "📄", label: "재직증명" },
 ];
 
 export default function Dashboard() {
@@ -326,7 +323,6 @@ export default function Dashboard() {
           {tab === "quotes" && <QuotesPanel userId={user.id} openModal={openModal} closeModal={closeModal} />}
           {tab === "payroll" && <PayrollPanel userId={user.id} openModal={openModal} closeModal={closeModal} />}
           {tab === "report" && <ReportPanel userId={user.id} />}
-          {tab === "certificate" && <CertificatePanel userId={user.id} />}
         </div>
       </div>
 
