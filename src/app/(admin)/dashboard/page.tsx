@@ -760,10 +760,7 @@ function NotesPanel({ userId, openModal, closeModal }: { userId: string; openMod
       <div className="flex items-center justify-between mb-3">
         <h4 className="text-lg font-bold">메모</h4>
         <div className="flex gap-1.5">
-          <button onClick={() => openModal("새 메모", <NoteForm onSave={save} />, "fullscreen")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">A</button>
-          <button onClick={() => openModal("새 메모", <NoteForm onSave={save} />, "bottom")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">B</button>
-          <button onClick={() => openModal("새 메모", <NoteForm onSave={save} />, "side")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">C</button>
-          <button onClick={() => { setInlineOpen(true); setInlineData({ title: "", content: "" }); }} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">D</button>
+          <button onClick={() => { setInlineOpen(true); setInlineData({ title: "", content: "" }); }} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">+ 추가</button>
         </div>
       </div>
       {/* Inline form */}
@@ -995,10 +992,7 @@ function ReservationsPanel({ userId, openModal, closeModal }: { userId: string; 
       <div className="flex items-center justify-between mb-3">
         <h4 className="text-lg font-bold">오늘 예약</h4>
         <div className="flex gap-1.5">
-          <button onClick={() => openModal("예약 추가", <ReservationForm onSave={save} />, "fullscreen")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">A</button>
-          <button onClick={() => openModal("예약 추가", <ReservationForm onSave={save} />, "bottom")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">B</button>
-          <button onClick={() => openModal("예약 추가", <ReservationForm onSave={save} />, "side")} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--gray-100)] text-[var(--gray-700)]">C</button>
-          <button onClick={() => { setInlineOpen(true); setInlineData({ customer_name: "", customer_phone: "", party_size: 2, reservation_time: "" }); }} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">D</button>
+          <button onClick={() => { setInlineOpen(true); setInlineData({ customer_name: "", customer_phone: "", party_size: 2, reservation_time: "" }); }} className="px-2.5 py-1 text-[10px] rounded-md bg-[var(--primary)] text-white">+ 추가</button>
         </div>
       </div>
       {/* Inline form */}
